@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { Routes,RouterModule } from '@angular/router';
 import { MaincontentComponent } from './components/maincontent/maincontent.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 const routes:Routes=[
   
   {path:'',component:ContactmanagerAppComponent,
@@ -30,6 +31,7 @@ children:[
   ],
   imports: [
     CommonModule,
+    MatSidenavModule,
     MaterialModule,
     FormsModule,
     FlexLayoutModule,
