@@ -14,6 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import { UserService } from './services/user.service';
+import { HttpClientModule } from '@angular/common/http';
 const routes:Routes=[
   
   {path:'',component:ContactmanagerAppComponent,
@@ -41,6 +42,7 @@ children:[
     MatCardModule,
     MaterialModule,
     FormsModule,
+    HttpClientModule,
     FlexLayoutModule,
     RouterModule.forChild(routes)
   ],

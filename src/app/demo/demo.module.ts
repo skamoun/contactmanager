@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { FlexboxComponent } from './flexbox/flexbox.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     ButtonsComponent,
@@ -18,7 +19,8 @@ import { FlexboxComponent } from './flexbox/flexbox.component';
     DemoRoutingModule,
     MaterialModule,
     FormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ]
 })
 export class DemoModule { }
