@@ -13,6 +13,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import { UserService } from './services/user.service';
 const routes:Routes=[
   
   {path:'',component:ContactmanagerAppComponent,
@@ -42,6 +43,7 @@ children:[
     FormsModule,
     FlexLayoutModule,
     RouterModule.forChild(routes)
-  ]
+  ],
+  providers:[UserService]
 })
 export class ContactmanagerModule { }
