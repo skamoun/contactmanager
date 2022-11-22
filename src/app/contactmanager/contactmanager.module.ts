@@ -10,6 +10,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { Routes,RouterModule } from '@angular/router';
 import { MaincontentComponent } from './components/maincontent/maincontent.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
 const routes:Routes=[
   
   {path:'',component:ContactmanagerAppComponent,
@@ -32,6 +34,8 @@ children:[
   imports: [
     CommonModule,
     MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
     MaterialModule,
     FormsModule,
     FlexLayoutModule,
