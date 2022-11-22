@@ -12,6 +12,7 @@ import { MaincontentComponent } from './components/maincontent/maincontent.compo
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
 const routes:Routes=[
   
   {path:'',component:ContactmanagerAppComponent,
@@ -36,6 +37,7 @@ children:[
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
+    MatCardModule,
     MaterialModule,
     FormsModule,
     FlexLayoutModule,
