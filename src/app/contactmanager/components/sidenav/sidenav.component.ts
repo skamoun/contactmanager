@@ -25,7 +25,7 @@ export class SidenavComponent implements OnInit {
     this.users.subscribe(
       data=>{
         console.log(data);
-      },
+      }
       
     )
   }

@@ -12,8 +12,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class ContactmanagerAppComponent implements OnInit {
 
-  constructor(private iconRegistry:MatIconRegistry,private sanitizer:DomSanitizer) { 
-    this.iconRegistry.addSvgIconSet(this.sanitizer.bypassSecurityTrustUrl('assets/avatars.svg'));
+  constructor(private iconRegistry:MatIconRegistry, private sanitizer:DomSanitizer) { 
+    this.iconRegistry.addSvgIconSet(this.sanitizer.bypassSecurityTrustResourceUrl('assets/avatars.svg'));
   }
 
   ngOnInit(): void {

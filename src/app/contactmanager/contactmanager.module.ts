@@ -15,10 +15,12 @@ import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import { UserService } from './services/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 const routes:Routes=[
   
   {path:'',component:ContactmanagerAppComponent,
 children:[
+  {path:':id',component:MaincontentComponent},
   {path:'',component:MaincontentComponent}
 ]},
   {
@@ -36,6 +38,7 @@ children:[
   ],
   imports: [
     CommonModule,
+    MatProgressSpinnerModule,
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,

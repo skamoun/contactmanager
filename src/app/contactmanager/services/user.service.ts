@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { ThisReceiver } from '@angular/compiler';
+;
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from '../models/user';
@@ -8,6 +8,7 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 export class UserService {
+  
   private _users = new BehaviorSubject<User[]>([]);
   private dataStore:{
     users: User[];
@@ -25,14 +26,17 @@ export class UserService {
     return this.http.get<User[]>(userUrl)
       .subscribe(data =>{
       this.dataStore.users=data;
+      this._users.next(Object.assign({},this.dataStore).users);
       },
       error=>{
         console.log('failed to fetch users')
       }
         
         );
-        this._users.next(Object.assign({},this.dataStore).users);
+       
 
   }
-
+  userById(id: number): User | undefined {
+    return this.dataStore.users.find(x=>x.id==id);
+  }
 }
