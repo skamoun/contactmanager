@@ -15,7 +15,10 @@ export class MaincontentComponent implements OnInit {
   ngOnInit(): void {
      this.route.params.subscribe((param:Params)=>{
       const id:number = +param['id'];
-      this.user= this.userService.userById(id);
+      this.userService.users.subscribe(users=>{
+        if(users.length==0) return;
+        this.user=users.find(x=>x.id==id);
+      });
       
     });
   }
