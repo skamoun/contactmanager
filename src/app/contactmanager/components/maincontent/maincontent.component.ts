@@ -9,15 +9,20 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./maincontent.component.css']
 })
 export class MaincontentComponent implements OnInit {
-  user:User | undefined;
+  user:User ;
   constructor(private route:ActivatedRoute,private userService:UserService) { }
 
   ngOnInit(): void {
      this.route.params.subscribe((param:Params)=>{
-      const id:number = +param['id'];
+      let id:number = +param['id'];
+      if(!id) id=1;
+      this.user=null ;
       this.userService.users.subscribe(users=>{
         if(users.length==0) return;
-        this.user=users.find(x=>x.id==id);
+        setTimeout(()=>{
+          this.user=this.userService.userById(id);
+
+        },500);
       });
       
     });
