@@ -16,7 +16,8 @@ export class SidenavComponent implements OnInit {
   
  public isScreenSmall : boolean | undefined;
  users :Observable<User[]> | undefined;
-  constructor(private breakpointObserver : BreakpointObserver,private userService : UserService,
+  constructor(private breakpointObserver : BreakpointObserver,
+    private userService : UserService,
     private router:Router) { }
 
   ngOnInit(): void {
@@ -29,7 +30,7 @@ export class SidenavComponent implements OnInit {
     this.userService.loadAll();
     this.router.events.subscribe(()=>{
       if(this.isScreenSmall){
-        this.sidenav?.close;
+        this.sidenav?.close();
       }
     });
 
