@@ -15,6 +15,7 @@ export class NotesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.dataSource=new MatTableDataSource<Note>(this.notes);
   }
 
 }
