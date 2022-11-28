@@ -16,6 +16,10 @@ import {MatCardModule} from '@angular/material/card';
 import { UserService } from './services/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
+import {MatTabsModule} from '@angular/material/tabs';
+import { NotesComponent } from './components/notes/notes.component';
+import {MatTableModule} from '@angular/material/table';
 const routes:Routes=[
   
   {path:'',component:ContactmanagerAppComponent,
@@ -34,10 +38,13 @@ children:[
     ContactmanagerAppComponent,
     ToolbarComponent,
     SidenavComponent,
-    MaincontentComponent
+    MaincontentComponent,
+    NotesComponent
   ],
   imports: [
     CommonModule,
+    MatTabsModule,
+    MatTableModule,
     MatProgressSpinnerModule,
     MatSidenavModule,
     MatToolbarModule,
