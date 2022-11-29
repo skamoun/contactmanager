@@ -2,6 +2,7 @@ import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChil
 import { Note } from '../../models/note';
 import {MatTableDataSource} from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-notes',
@@ -14,9 +15,11 @@ export class NotesComponent implements OnInit,AfterViewInit {
  displayedColumns: string[] = ['position', 'title', 'date'];
  dataSource:MatTableDataSource<Note> ;
  @ViewChild(MatPaginator) paginator: MatPaginator;
+ @ViewChild(MatSort) sort: MatSort;
   constructor() { }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort= this.sort;
   }
 
   applyFilter(event: Event) {
