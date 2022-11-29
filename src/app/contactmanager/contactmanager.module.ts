@@ -20,6 +20,10 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTabsModule} from '@angular/material/tabs';
 import { NotesComponent } from './components/notes/notes.component';
 import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 const routes:Routes=[
   
   {path:'',component:ContactmanagerAppComponent,
@@ -45,6 +49,9 @@ children:[
     CommonModule,
     MatTabsModule,
     MatTableModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
     MatProgressSpinnerModule,
     MatSidenavModule,
     MatToolbarModule,
