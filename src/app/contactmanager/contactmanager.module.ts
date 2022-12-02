@@ -24,7 +24,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatSortModule} from '@angular/material/sort';
-
+import { MatMenuModule} from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
+import { NewContactDialogComponent } from './components/new-contact-dialog/new-contact-dialog.component';
 const routes:Routes=[
   
   {path:'',component:ContactmanagerAppComponent,
@@ -44,14 +46,17 @@ children:[
     ToolbarComponent,
     SidenavComponent,
     MaincontentComponent,
-    NotesComponent
+    NotesComponent,
+    NewContactDialogComponent
   ],
   imports: [
     CommonModule,
     MatTabsModule,
+    MatDialogModule,
     MatTableModule,
     MatSortModule,
     MatInputModule,
+    MatMenuModule,
     MatFormFieldModule,
     MatPaginatorModule,
     MatProgressSpinnerModule,
