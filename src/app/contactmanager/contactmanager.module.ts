@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { ContactmanagerAppComponent } from './contactmanager-app.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import {  MatSelectModule} from '@angular/material/select';
 import { MaterialModule } from '../shared/material.module';
 import { FormsModule } from '@angular/forms';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { Routes,RouterModule } from '@angular/router';
 import { MaincontentComponent } from './components/maincontent/maincontent.component';
@@ -24,6 +25,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatSortModule} from '@angular/material/sort';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatMenuModule} from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
 import { NewContactDialogComponent } from './components/new-contact-dialog/new-contact-dialog.component';
@@ -53,9 +55,12 @@ children:[
     CommonModule,
     MatTabsModule,
     MatDialogModule,
+    MatSelectModule,
     MatTableModule,
+    MatDatepickerModule,
     MatSortModule,
     MatInputModule,
+    ReactiveFormsModule,
     MatMenuModule,
     MatFormFieldModule,
     MatPaginatorModule,
